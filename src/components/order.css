@@ -1,0 +1,18 @@
+.orderItem {
+}
+
+.deleteButton{
+    visibility: hidden;
+    background-color: white;
+    border: none;
+}
+
+
+.orderItem:hover {
+    color: red;
+}
+
+
+.orderItem:hover .deleteButton {
+    visibility: visible;
+}

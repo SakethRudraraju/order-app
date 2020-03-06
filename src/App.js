@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Menu from "./components/Menu";
+import Order from "./components/Order";
+import MenuData from "./menu.json"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = { menuList : MenuData, orderList : []}
+
+  }
+  AddOrder(id){
+    this.setState((state)=>({ orderList : state.orderList.concat(id)}))
+  }
+  DeleteOrder(i){
+    var newList = this.state.orderList
+    newList.shift(i)
+    this.setState((state)=>({ orderList : newList}))
+  }
+  render() {
+    return (
+      <div className="container-sm">
+        <h1 class="text-center">Hawk Peak Tavern</h1>
+        <div class="row">
+          <Menu menuList={this.state.menuList} onClick={(id)=>{this.AddOrder(id)}}/>
+          <div class="clearfix"></div>
+          <Order orderList={this.state.orderList}   menuList={this.state.menuList} DeleteOrder={(i)=>{this.DeleteOrder(i)}} />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

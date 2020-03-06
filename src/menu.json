@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Salmon Soup",
+    "price": 2,
+    "info": "A hot and sour soup with poached salmon guarunteed to warm you up in this cold climate"
+  },
+  {
+    "name": "Mutton Chops",
+    "price": 4,
+    "info": "Succulent pieces of mutton wrapped in a perfect blend of aromatic spices and herbs"
+  },
+  {
+    "name": "Kachemak Oyster",
+    "price": 5,
+    "info": "Fresh oyster served on the halfshell"
+  },
+  {
+    "name": "House Salad",
+    "price": 1,
+    "info": "You're welcome vegetarians"
+  }
+]
