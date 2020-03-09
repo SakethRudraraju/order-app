@@ -2,6 +2,9 @@
 
 A simple react client for ordering some items from a menu for a fictional mountaintop tavern
 
+## Demo
+wporder.sakethr.com
+
 ## What I learned
 * React states and classes
 * JSX
