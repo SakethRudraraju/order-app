@@ -17,7 +17,7 @@ class Order extends React.Component {
       <div class="col">
         <h2 class="text-center">Order</h2>
         <ul class="list-group list-group-flush">
-          {this.props.orderList.map((order,i) => {
+          {this.props.orderList.map((order, i) => {
             return (
               <li className="list-group-item row orderItem">
                 <div class="row">
@@ -30,7 +30,9 @@ class Order extends React.Component {
                   <button
                     type="button"
                     className="deleteButton"
-                    onClick={()=>{this.props.DeleteOrder(i)}}
+                    onClick={() => {
+                      this.props.DeleteOrder(i);
+                    }}
                   >
                     <i class="fas fa-times"></i>
                   </button>
@@ -41,13 +43,15 @@ class Order extends React.Component {
         </ul>
         <p className="text-center">Total : ${this.CalcTotalBill()}</p>
         <div class="text-center">
-        <button
-                    type="button"
-                    className="btn btn-success"
-                    onClick={()=>{alert("Order Up!")}}
-                  >
-                    Order
-                  </button>
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={() => {
+              alert("Order Up!");
+            }}
+          >
+            Order
+          </button>
         </div>
       </div>
     );
